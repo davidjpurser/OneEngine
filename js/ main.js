@@ -23,6 +23,9 @@ jQuery(document).ready(function($) {
 	
 	// SCROLL TO
 	$('#main-menu-top a,ul.slicknav_nav li a').click(function(event){
+		if (typeof $(this).hash === "undefined") {
+			return;
+		}
 		event.stopPropagation();
 		event.preventDefault();
 
