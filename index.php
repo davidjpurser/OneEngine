@@ -50,31 +50,6 @@ get_header();
 	<div class="blog-header-img" <?php echo $css ?>></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <!-- Logo
-                ======================================================================== -->
-                <div calss="logo-wrapper">
-                    <div class="logo">
-                         <a href="<?php echo home_url(); ?>">
-                            <?php 
-                                $top   = '' ;
-                                $left  = '' ;
-                                $width = '' ;
-                                if( oneengine_option('logo_top') != '' )$top    = 'top:'.oneengine_option('logo_top').'px;' ;
-                                if( oneengine_option('logo_left') != '' )$left  = 'left:'.oneengine_option('logo_left').'px;';
-                                if( oneengine_option('logo_width') != '' )$width = 'width:'.oneengine_option('logo_width').'px;';
-                                if( oneengine_option('custom_logo', false, 'url') !== '' ){
-                                    echo '<div class="logo-wrapper" style="'.$width.$left.$top.'"><img src="'. oneengine_option('custom_logo', false, 'url') .'" alt="'.get_bloginfo( 'name' ).'" /></div>';
-                                }else{
-                            ?>
-                                <div class="logo-img"><span>E</span></div>
-                            <?php } ?>
-                         </a>
-                    </div>  
-                </div>
-                <!-- Logo / End -->
-            </div>
-            
             <?php 
 				$color_title		= oneengine_option('header_blog_title_color'); 
 				$color_sub_title	= oneengine_option('header_blog_subtitle_color');
