@@ -151,7 +151,6 @@
 			<div class="copyright">
 				<?php echo nl2br(oneengine_option('copyright')); ?>
 				<br>
-				<a href="http://www.enginethemes.com/themes/oneengine" target="_blank">One page WordPress theme</a>. Designed by <a href="http://www.enginethemes.com"  target="_blank">EngineThemes</a>.
 			</div>			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
