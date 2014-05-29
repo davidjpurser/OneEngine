@@ -117,7 +117,7 @@ get_header();
 	<div class="row">
 		<div class="col-md-12 blog-filer">
 			<ul>
-				<li class="active">
+				<li class="<?php echo get_query_var( 'cat' ) ? '' : "active" ?>">
 					<a href="<?php if( get_option( 'show_on_front' ) == 'page' ) echo get_permalink( get_option('page_for_posts' ) );
 else echo bloginfo('url'); ?>">
 						<?php _e('All','oneengine') ?>
@@ -127,7 +127,7 @@ else echo bloginfo('url'); ?>">
 					$categories = get_categories( array('hide_empty' => 0) );
 					foreach ($categories as $category) {
 				?>
-				<li>
+				<li class="<?php echo get_query_var( 'cat' ) == $category->term_id ? 'active' : '' ; ?>">
 					<a href="<?php echo get_category_link( $category );?>">
 						<?php echo $category->name ?>
 					</a>
