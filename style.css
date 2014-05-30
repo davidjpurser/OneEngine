@@ -1249,7 +1249,7 @@ header{
 #main-menu-top .main-menu{
 	padding:0;
 	margin:0;
-	list-style:none;
+	list-style: none inside;
 }
 #main-menu-top .main-menu li{
 	display:inline-block;
@@ -1268,6 +1268,21 @@ header{
 }
 #main-menu-top .main-menu li a:hover, #main-menu-top .main-menu li a.active{
 	border-bottom-color:#ccc;
+}
+#main-menu-top .sub-menu {
+	float: left;
+	max-width: 120px;
+	position: absolute;
+	display: none;
+	padding: 0;
+	text-align: center;
+	border: 1px solid #BDC3C7;
+	border-top: none;
+	background: white;
+	z-index: 9999;
+}
+#main-menu-top li:hover ul.sub-menu {
+	display: block;
 }
 #header.stuck-sticky {
 	position: fixed;
@@ -2027,6 +2042,9 @@ footer {
 	header{
 		height: 50px;
 		position:relative;
+	}
+	.logo-wrapper img {
+		max-height: 50px;
 	}
 	.logo a{
 		position: relative;
