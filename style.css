@@ -1269,6 +1269,7 @@ header{
 #main-menu-top .main-menu li a:hover, #main-menu-top .main-menu li a.active{
 	border-bottom-color:#ccc;
 }
+
 #main-menu-top .sub-menu {
 	float: left;
 	max-width: 120px;
