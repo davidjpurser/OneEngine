@@ -1272,7 +1272,6 @@ header{
 
 #main-menu-top .sub-menu {
 	float: left;
-	max-width: 120px;
 	position: absolute;
 	display: none;
 	padding: 0;
@@ -1285,6 +1284,14 @@ header{
 #main-menu-top li:hover ul.sub-menu {
 	display: block;
 }
+#main-menu-top .sub-menu li {
+	display: block;
+	min-width: 100px;
+}
+#main-menu-top .sub-menu li a {
+	padding: 10px 15px;
+}
+
 #header.stuck-sticky {
 	position: fixed;
 	top: 0;
