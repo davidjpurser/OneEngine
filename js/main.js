@@ -6,9 +6,13 @@ jQuery(window).load(function() {
 		setTimeout(function(){
 			jQuery.scrollTo( window.location.hash, 0, {offset:-jQuery(".sticky-wrapper").height()});
 		}, 1);
-		
-	
 	}
+	jQuery('#header').waypoint('sticky', {
+	  wrapper: '<div class="sticky-wrapper" />',
+	  stuckClass: 'stuck-sticky'
+	});
+	/* ==================== STICKY HEADER ==================== */
+	
 });
 
 jQuery(document).ready(function($) {
@@ -361,12 +365,7 @@ jQuery(document).ready(function($) {
 	}
 	/* ==================== OWL CAROUSEL SYNC ==================== */
 	/* ==================== STICKY HEADER ==================== */
-	$('#header').waypoint('sticky', {
-	  wrapper: '<div class="sticky-wrapper" />',
-	  stuckClass: 'stuck-sticky'
-	});
-	/* ==================== STICKY HEADER ==================== */
-	
+
 
 });
 
