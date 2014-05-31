@@ -394,6 +394,11 @@ jQuery(function($){
 		                .css('border-bottom-color', bgcolor);	
 			}, { offset: '25%' });
         }
+        if (pos > header_height) {
+        	$('#header').addClass('see-through');
+        } else {
+        	$('#header').removeClass('see-through');
+        }
     });
 });
 
