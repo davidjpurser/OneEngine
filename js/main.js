@@ -2,6 +2,13 @@ jQuery(window).load(function() {
 	if(document.getElementById("all_click"))
 		document.getElementById("all_click").click();
 	jQuery('.mask-color').fadeOut('slow');
+	if (window.location.hash ) {
+		setTimeout(function(){
+			jQuery.scrollTo( window.location.hash, 0, {offset:-jQuery(".sticky-wrapper").height()});
+		}, 1);
+		
+	
+	}
 });
 
 jQuery(document).ready(function($) {
@@ -22,13 +29,12 @@ jQuery(document).ready(function($) {
     });
 	
 	// SCROLL TO
-	$('#main-menu-top a,ul.slicknav_nav li a').click(function(event){
-		if (typeof $(this).hash === "undefined") {
+	$('#main-menu-top .current-menu-item a,ul.slicknav_nav .current-menu-item a').click(function(event){
+		if (typeof (this.hash) === "undefined" || this.hash == "") {
 			return;
 		}
 		event.stopPropagation();
 		event.preventDefault();
-
 		if($(this).hasClass('active'))
 			return;
 		
@@ -36,9 +42,9 @@ jQuery(document).ready(function($) {
 		$(this).addClass('active');
 
 		if(this.hash == "#home")
-			$.scrollTo(0,800);
+			$.scrollTo(0,0);
 		else
-			$.scrollTo( this.hash, 800, {offset:-$(".sticky-wrapper").height()});
+			$.scrollTo( this.hash, 0, {offset:-$(".sticky-wrapper").height()});
 
 		var bgcolor = $(this.hash).find('span.line-title').css('backgroundColor');
 		$(this).css('border-bottom-color', bgcolor);
@@ -50,6 +56,7 @@ jQuery(document).ready(function($) {
 
 		return false;
 	});
+
 	$("a#scroll_to").click(function(event) {
 		$.scrollTo("#header", 800);
 	});
@@ -360,6 +367,7 @@ jQuery(document).ready(function($) {
 	});
 	/* ==================== STICKY HEADER ==================== */
 	
+
 });
 
 jQuery(function($){

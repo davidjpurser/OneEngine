@@ -1258,7 +1258,7 @@ header{
 	text-transform:uppercase;
 	padding:27px 15px;
 	display:block;
-	border-bottom:4px solid transparent;
+	border:4px solid transparent;
 	/*TRANSISTIONS*/
 	-webkit-transition: all 0.5s ease;
 	   -moz-transition: all 0.5s ease;
@@ -1269,7 +1269,10 @@ header{
 #main-menu-top .main-menu li a:hover, #main-menu-top .main-menu li a.active{
 	border-bottom-color:#ccc;
 }
-
+#main-menu-top ul.sub-menu li a:hover, #main-menu-top ul.sub-menu li a:active {
+	border-left-color:#ccc;
+	border-bottom-color: transparent;
+}
 #main-menu-top .sub-menu {
 	float: left;
 	position: absolute;
@@ -1296,7 +1299,17 @@ header{
 	position: fixed;
 	top: 0;
 	background: #fff;
+	opacity: 0.7;
 	z-index: 999;
+
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+}
+#header.stuck-sticky:hover{
+	opacity: 1;
 }
 /* --------- LOGO -------- */
 .logo{
@@ -1495,9 +1508,8 @@ footer {
 }
 .social-footer li{
 	display: inline-block;
-	margin: 15px;
-	padding-right: 15px;
-	margin-left: 0;
+	margin: 15px 0;
+	padding: 0 15px;
 	border-right: 1px solid #fff;
 	font-size: 18px;
 }

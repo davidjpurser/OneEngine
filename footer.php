@@ -10,7 +10,6 @@
 
 	</div><!-- #content -->
 	<div class="clearfix"></div>
-	<?php if(is_front_page()){ ?>
 	<footer id="contact" class="site-footer template-wrap" role="contentinfo">
 		<?php 
 			$color		= oneengine_option('footer_blog_color'); 
@@ -55,6 +54,8 @@
 			}
         ?>
         <div class="footer-img" <?php echo $css ?>></div>
+    	<?php if(is_front_page()){ ?>
+
     	<div class="container">
             <div class="row">
 				<?php 
@@ -116,7 +117,7 @@
                     <?php } ?>
                 </div>
                 <div class="clearfix"></div>
-                <?php if(oneengine_option('contact_form') != '') {?>
+                <?php if(oneengine_option('contact_form') != '' && is_front_page()) {?>
                 <div class="contact-form-wrapper">
                 	<h2 class="contact-title"><?php echo __('Get In Touch', 'oneengine')?></h2>
                 	<?php echo do_shortcode( oneengine_option('contact_form') ); ?>
@@ -124,6 +125,7 @@
                 <?php } ?>
             </div>
         </div>
+        <?php } ?>
 		<div class="site-info">
 			<ul class="social-footer">
 				<?php if(oneengine_option('facebook') != '') {?>
@@ -154,7 +156,7 @@
 			</div>			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	<?php } ?>
+	
 </div><!-- #page -->
 <?php wp_footer(); ?>
 </body>
