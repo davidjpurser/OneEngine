@@ -125,7 +125,6 @@
                 <?php } ?>
             </div>
         </div>
-        <?php } ?>
 		<div class="site-info">
 			<ul class="social-footer">
 				<?php if(oneengine_option('facebook') != '') {?>
@@ -155,6 +154,7 @@
 				<br>
 			</div>			
 		</div><!-- .site-info -->
+        <?php } ?>
 	</footer><!-- #colophon -->
 	
 </div><!-- #page -->
