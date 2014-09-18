@@ -10,6 +10,7 @@
 
 	</div><!-- #content -->
 	<div class="clearfix"></div>
+	<?php if(is_front_page()){ ?>
 	<footer id="contact" class="site-footer template-wrap" role="contentinfo">
 		<?php 
 			$color		= oneengine_option('footer_blog_color'); 
@@ -54,8 +55,7 @@
 			}
         ?>
         <div class="footer-img" <?php echo $css ?>></div>
-    	<?php if(is_front_page()){ ?>
-
+    	
     	<div class="container">
             <div class="row">
 				<?php 
@@ -154,9 +154,9 @@
 				<br>
 			</div>			
 		</div><!-- .site-info -->
-        <?php } ?>
+       
 	</footer><!-- #colophon -->
-	
+	 <?php } ?>
 </div><!-- #page -->
 <?php wp_footer(); ?>
 </body>
