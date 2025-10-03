@@ -1,3 +1,5 @@
+> The theme is now very old, not supported, and archived, I suggest against using it.
+
 OneEngine
 =========
 
